@@ -52,7 +52,7 @@ def main():
     parser.add_argument('--checkpoint_dir', dest='checkpoint_dir', default='checkpoint', help='models are saved here')
     parser.add_argument('--sample_dir', dest='sample_dir', default='sample', help='sample are saved here')
 
-    parser.add_argument('--result_path', dest='result_path', default='D:/python_code/1101/code/data0527/test_data_result0530/',
+    parser.add_argument('--result_path', dest='result_path', default='D:/python_code/1101/code/data0527/test_data_result0530_NoShanjian/',
                         help='results are saved here')
 
     parser.add_argument('--test_dir', dest='test_dir', default='test', help='test sample are saved here')
@@ -125,13 +125,21 @@ def main():
         mr_3d = []
         skull_3d = []
 
-        for i in range(ctimg.shape[0] - 40):
-            img_mr_slice = mrimg[i + 30]
-            img_ct_slice = ctimg[i + 30]
-            img_skull_slice = skullimg[i + 30]
+        #for i in range(ctimg.shape[0] - 40):
+        for i in range(ctimg.shape[0]):
+            # img_mr_slice = mrimg[i + 30]
+            # img_ct_slice = ctimg[i + 30]
+            # img_skull_slice = skullimg[i + 30]
+            # img_mr_slice_before = mrimg[i + 30 - 1]
+            # img_mr_slice_after = mrimg[i + 30 + 1]
 
-            img_mr_slice_before = mrimg[i + 30 - 1]
-            img_mr_slice_after = mrimg[i + 30 + 1]
+
+            img_mr_slice = mrimg[i]
+            img_ct_slice = ctimg[i]
+            img_skull_slice = skullimg[i]
+            img_mr_slice_before = mrimg[i - 1]
+            img_mr_slice_after = mrimg[i + 1]
+
 
             img_ct_slice[img_ct_slice < -1000] = -1000
             img_ct_slice[img_ct_slice > 3000] = 3000

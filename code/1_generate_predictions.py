@@ -67,20 +67,20 @@ def main():
     test_checkpoint = 'D:/python_code/1101/code/data0527/pth/epoch_200_weights.pth'
     center = 'D'
 
-    result_path = os.path.join(test_path, 'result')
-    if not os.path.exists(result_path):
-        os.makedirs(result_path)
-    center_result_path = os.path.join(result_path, center)
+    # result_path = os.path.join(test_path, 'result')
+    # if not os.path.exists(result_path):
+    #     os.makedirs(result_path)
+    # center_result_path = os.path.join(result_path, center)
+    #
+    # if not os.path.exists(center_result_path):
+    #     os.makedirs(center_result_path)
+    #
+    # nii_path = os.path.join(center_result_path, 'nii/')
+    # if not os.path.exists(nii_path):
+    #     os.makedirs(nii_path)
 
-    if not os.path.exists(center_result_path):
-        os.makedirs(center_result_path)
-
-    nii_path = os.path.join(center_result_path, 'nii/')
-    if not os.path.exists(nii_path):
-        os.makedirs(nii_path)
-
-    gt_nii_path = os.path.join(nii_path, 'gt/')
-    syn_nii_path = os.path.join(nii_path, 'syn/')
+    gt_nii_path = os.path.join(test_path, 'gt/')
+    syn_nii_path = os.path.join(test_path, 'syn/')
     if not os.path.exists(gt_nii_path):
         os.makedirs(gt_nii_path)
     if not os.path.exists(syn_nii_path):
@@ -250,3 +250,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

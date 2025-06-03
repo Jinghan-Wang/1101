@@ -5,6 +5,7 @@ step 2 配准  获取配准之后的核磁进行预测
 执行
 """
 
+
 # ct_dir = r'/data/CycleGan/Data/Register_data/chongqing_20250416/ct_nii'
 # mr_dir = r'/data/CycleGan/Data/Register_data/chongqing_20250416/mr_nii'
 # war_ct_dir = r'/data/CycleGan/Data/Register_data/chongqing_20250416/war_ct_nii'
